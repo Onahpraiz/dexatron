@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dexatron Admin</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+<!-- LOGIN SCREEN -->
+<div class="admin-login-screen" id="loginScreen">
+  <div class="admin-login-card">
+    <img src="assets/dexatron_badge.jpg" alt="Dexatron logo" class="admin-login-logo">
+    <h1>Dexatron Admin</h1>
+    <p class="admin-login-sub">Restricted to the Dexatron desk.</p>
+    <form id="loginForm">
+      <label>Email
+        <input type="email" id="loginUser" autocomplete="username" required>
+      </label>
+      <label>Password
+        <input type="password" id="loginPass" autocomplete="current-password" required>
+      </label>
+      <p class="login-error" id="loginError">Incorrect username or password.</p>
+      <button type="submit" class="btn btn-primary btn-block">Log in</button>
+    </form>
+    <a href="index.html" class="admin-back-link">&larr; Back to the site</a>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="admin-dash" id="dashboard" hidden>
+  <header class="admin-topbar">
+    <div class="admin-topbar-brand">
+      <img src="assets/dexatron_badge.jpg" alt="Dexatron logo">
+      <span>Dexatron Admin</span>
+    </div>
+    <div class="admin-topbar-actions">
+      <a href="index.html" target="_blank" class="btn btn-ghost btn-sm">View site</a>
+      <button class="btn btn-ghost btn-sm" id="logoutBtn">Log out</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-panel">
+      <h2 id="formTitle">Publish new content</h2>
+      <p class="admin-panel-sub">Add an image or video, it appears in the Feed on the public site right away.</p>
+
+      <form id="contentForm">
+        <input type="hidden" id="editingId" value="">
+
+        <div class="dropzone" id="dropzone">
+          <p id="dropzoneText">Drag a file here, or click to choose one</p>
+          <input type="file" id="fileInput" accept="image/*,video/*" hidden>
+        </div>
+        <div class="upload-preview" id="uploadPreview"></div>
+
+        <label class="upload-field">Title
+          <input type="text" id="fieldTitle" placeholder="e.g. Episode 2: The Honeypot" required>
+        </label>
+        <label class="upload-field">Description
+          <textarea id="fieldDescription" rows="3" placeholder="A line or two about this drop"></textarea>
+        </label>
+        <div class="field-row">
+          <label class="upload-field">Category
+            <select id="fieldCategory">
+              <option>Comic</option>
+              <option>Episode</option>
+              <option>News Bulletin</option>
+              <option>Weekly Update</option>
+              <option>Community Update</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="upload-field">Date
+            <input type="date" id="fieldDate" required>
+          </label>
+        </div>
+        <label class="checkbox-field">
+          <input type="checkbox" id="fieldFeatured">
+          <span>Feature this on the Feed</span>
+        </label>
+        <label class="checkbox-field">
+          <input type="checkbox" id="fieldPublished" checked>
+          <span>Published (visible on the public site)</span>
+        </label>
+
+        <div class="admin-form-actions">
+          <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Publish</button>
+          <button type="button" class="btn btn-ghost" id="cancelEditBtn" hidden>Cancel edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="admin-panel">
+      <h2>All content</h2>
+      <p class="admin-panel-sub">Everything you've published or saved as a draft.</p>
+      <div class="admin-list" id="adminList"></div>
+      <div class="admin-list-empty" id="adminListEmpty">
+        <p>Nothing here yet, add your first piece of content on the left.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="content-store.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

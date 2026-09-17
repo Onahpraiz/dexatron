@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dexatron | The Chain Doesn't Lie</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ambient background layer -->
+<div class="ambient" aria-hidden="true">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+</div>
+
+<!-- floating beans layer -->
+<div class="bean-field" id="beanField" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">
+      <img src="assets/dexatron_badge.jpg" alt="Dexatron logo" class="nav-logo">
+      <span>Dexatron</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#content">Content</a>
+      <a href="#community">Community</a>
+      <a href="#token">Token</a>
+      <a href="#socials">Socials</a>
+    </nav>
+    <a href="https://t.me/+HoPFVyeDscowMzVk" target="_blank" rel="noopener" class="nav-cta">Join Telegram</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <p class="hero-kicker">A crypto universe with personality</p>
+    <h1>Follow the chain.<br><span class="accent">Find the truth.</span></h1>
+    <p class="hero-sub">Dexatron traces wallets, liquidity and contracts, then turns what it finds into comics, drops and a community that spots trouble before it spreads.</p>
+    <div class="hero-actions">
+      <a href="#content" class="btn btn-primary">Enter the Feed</a>
+      <a href="https://t.me/+HoPFVyeDscowMzVk" target="_blank" rel="noopener" class="btn btn-ghost">Join the Community</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://x.com/DexatronCrypto" target="_blank" rel="noopener" aria-label="X"><img src="assets/icon_x.jpg" alt=""></a>
+      <a href="https://t.me/+HoPFVyeDscowMzVk" target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/icon_telegram.jpg" alt=""></a>
+      <a href="https://www.tiktok.com/@dexatroncrypto" target="_blank" rel="noopener" aria-label="TikTok"><img src="assets/icon_tiktok.jpg" alt=""></a>
+      <a href="https://youtube.com/@dexatroncrypto" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/icon_youtube.jpg" alt=""></a>
+    </div>
+  </div>
+  <div class="hero-character" id="heroCharacter">
+    <img src="assets/dexatron_fullbody.jpg" alt="Dexatron, an armored green-and-black robot guardian, standing before a neon city" class="hero-character-img">
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Check the liquidity</span>
+    <span>Check the holders</span>
+    <span>Check the wallets</span>
+    <span>Good Beans build a better tomorrow</span>
+    <span>The chain doesn't lie</span>
+    <span>Check the liquidity</span>
+    <span>Check the holders</span>
+    <span>Check the wallets</span>
+    <span>Good Beans build a better tomorrow</span>
+    <span>The chain doesn't lie</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about reveal">
+  <div class="about-grid">
+    <div class="about-media tilt-card">
+      <img src="assets/dexatron_ledge.jpg" alt="Dexatron perched over the city at night, watching for trouble" class="about-img">
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">Why Dexatron exists</p>
+      <h2>Most crypto accounts promote, report, or educate. We do all three, and have fun doing it.</h2>
+      <p>Dexatron traces the on-chain evidence: liquidity, holders, dev wallets, and turns it into stories people actually want to read. No hype, no fear-mongering, just proof, told well.</p>
+      <div class="about-pills">
+        <span>Investigation</span>
+        <span>Education</span>
+        <span>Entertainment</span>
+        <span>Community</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE BEANS -->
+<section id="beans" class="beans reveal">
+  <p class="eyebrow center">Different hats. Same mission.</p>
+  <h2 class="center">Meet the Beans</h2>
+  <p class="center beans-sub">Twelve little legends, one job each: educate, expose, protect.</p>
+  <div class="beans-frame tilt-card">
+    <img src="assets/beans_grid.jpg" alt="The twelve Dexatron Beans, front and side view" class="beans-img">
+  </div>
+</section>
+
+<!-- FUN BREAK -->
+<section class="break reveal">
+  <div class="break-inner">
+    <div class="break-media tilt-card">
+      <img src="assets/dexatron_buysell.jpg" alt="Dexatron with a Bean, weighing buy versus sell" class="break-img">
+    </div>
+    <div class="break-copy">
+      <p class="eyebrow">Before you ape in</p>
+      <h3>Buy the hype, or investigate the story?</h3>
+      <p>Every Bean has been there: chart looking good, group chat going wild. Dexatron's whole job is giving you the extra ten minutes to check before you click.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT HUB -->
+<section id="content" class="content-hub reveal">
+  <p class="eyebrow center">Fresh from the world of Dexatron</p>
+  <h2 class="center">The Feed</h2>
+  <p class="center content-sub">Comics, episodes, news bulletins and community drops, everything happening in the Dexatron universe, all in one place.</p>
+
+  <div class="content-grid" id="contentGrid"></div>
+  <div class="content-empty" id="contentEmptyState">
+    <span class="content-empty-icon">🫘</span>
+    <p>Nothing published yet, the first drop is on its way. Follow along on Telegram so you don't miss it.</p>
+  </div>
+</section>
+
+<!-- WEEKLY SCHEDULE -->
+<section id="schedule" class="schedule reveal">
+  <p class="eyebrow center">On the clock</p>
+  <h2 class="center">The Weekly Drop</h2>
+  <div class="schedule-strip" id="scheduleStrip">
+    <div class="day-card" data-day="1"><span class="day-name">Mon</span><span class="day-label">Comic Release</span></div>
+    <div class="day-card" data-day="2"><span class="day-name">Tue</span><span class="day-label">Comic Release</span></div>
+    <div class="day-card" data-day="3"><span class="day-name">Wed</span><span class="day-label">Hero of the Week</span></div>
+    <div class="day-card" data-day="4"><span class="day-name">Thu</span><span class="day-label">Community Puzzle</span></div>
+    <div class="day-card" data-day="5"><span class="day-name">Fri</span><span class="day-label">News Bulletin</span></div>
+    <div class="day-card rest" data-day="6"><span class="day-name">Sat</span><span class="day-label"></span></div>
+    <div class="day-card" data-day="0"><span class="day-name">Sun</span><span class="day-label">Power Bean Announcement</span></div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" class="community reveal">
+  <div class="community-media tilt-card">
+    <img src="assets/dexatron_beanz_city.jpg" alt="Dexatron with the Beans community behind him">
+  </div>
+  <div class="community-grid">
+    <div class="community-col">
+      <p class="eyebrow">The mission</p>
+      <h2>The community doesn't just watch. Eventually, it helps investigate.</h2>
+      <p>Leads on suspicious tokens, wallets and scam patterns start as tips from people paying attention. The strong ones become cases the whole community learns from.</p>
+      <div class="community-roles">
+        <span>Research</span>
+        <span>Content</span>
+        <span>Story</span>
+        <span>Visuals</span>
+        <span>Social</span>
+        <span>Community</span>
+      </div>
+    </div>
+    <div class="community-col">
+      <p class="eyebrow">The code we don't break</p>
+      <ul class="rules-list">
+        <li>Evidence before accusations, always.</li>
+        <li>No calling someone a scammer without evidence that holds up.</li>
+        <li>Facts, probabilities and speculation stay clearly labeled.</li>
+        <li>Never manufactured evidence, not even for entertainment.</li>
+        <li>Paid relationships never dictate an investigation.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TOKEN -->
+<section id="token" class="token reveal">
+  <div class="token-card">
+    <div class="token-coin">
+      <img src="assets/dexatron_badge.jpg" alt="Dexatron token badge">
+    </div>
+    <p class="eyebrow">The Dexatron Token</p>
+    <h2>Coming soon.</h2>
+    <p class="token-copy">The Dexatron token is set to launch on Robinhood Chain. More details will be communicated soon.</p>
+    <span class="token-pill">Not live yet, anything claiming otherwise isn't from us</span>
+  </div>
+</section>
+
+<!-- SOCIALS -->
+<section id="socials" class="follow reveal">
+  <p class="eyebrow center">Stay close</p>
+  <h2 class="center">Follow along</h2>
+  <div class="follow-links">
+    <a href="https://x.com/DexatronCrypto" target="_blank" rel="noopener" class="follow-link">
+      <img src="assets/icon_x.jpg" alt="X" class="follow-icon-img"><span>X</span>
+    </a>
+    <a href="https://t.me/+HoPFVyeDscowMzVk" target="_blank" rel="noopener" class="follow-link">
+      <img src="assets/icon_telegram.jpg" alt="Telegram" class="follow-icon-img"><span>Telegram</span>
+    </a>
+    <a href="https://www.tiktok.com/@dexatroncrypto" target="_blank" rel="noopener" class="follow-link">
+      <img src="assets/icon_tiktok.jpg" alt="TikTok" class="follow-icon-img"><span>TikTok</span>
+    </a>
+    <a href="https://youtube.com/@dexatroncrypto" target="_blank" rel="noopener" class="follow-link">
+      <img src="assets/icon_youtube.jpg" alt="YouTube" class="follow-icon-img"><span>YouTube</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/dexatron_badge.jpg" alt="Dexatron logo" class="footer-logo">
+      <span>Dexatron</span>
+    </div>
+    <p class="footer-tagline">Follow the chain. Find the truth.</p>
+    <a href="admin.html" class="admin-trigger">Admin</a>
+  </div>
+</footer>
+
+<div class="lightbox-backdrop" id="lightboxBackdrop">
+  <div class="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <div class="lightbox-media" id="lightboxMedia"></div>
+    <div class="lightbox-body">
+      <span class="content-tag" id="lightboxTag"></span>
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxDescription"></p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="content-store.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+[hidden]{
+  display: none !important;
+}
+
+.admin-body{
+  background:var(--bg);
+  min-height:100vh;
+}
+
+/* ---------- login screen ---------- */
+.admin-login-screen{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.admin-login-card{
+  background:var(--panel-solid);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:40px 36px;
+  max-width:380px;
+  width:100%;
+  text-align:center;
+}
+.admin-login-logo{
+  width:64px; height:64px;
+  border-radius:50%;
+  margin:0 auto 18px;
+}
+.admin-login-card h1{font-size:1.4rem; color:var(--ink); font-family:'Baloo 2';}
+.admin-login-sub{font-size:13.5px; margin-bottom:24px;}
+.admin-login-card form{text-align:left;}
+.admin-back-link{
+  display:inline-block;
+  margin-top:18px;
+  font-size:13px;
+  color:var(--muted);
+}
+.admin-back-link:hover{color:var(--green);}
+
+/* ---------- form fields (shared look) ---------- */
+.admin-login-card label, .upload-field, .checkbox-field{
+  display:block;
+  font-size:12.5px;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+.admin-login-card input, .upload-field input, .upload-field select, .upload-field textarea{
+  display:block;
+  width:100%;
+  margin-top:6px;
+  padding:11px 13px;
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:10px;
+  color:var(--ink);
+  font-size:14px;
+  font-family:inherit;
+}
+.upload-field textarea{resize:vertical;}
+.admin-login-card input:focus, .upload-field input:focus, .upload-field select:focus, .upload-field textarea:focus{
+  outline:2px solid var(--green); outline-offset:1px;
+}
+.login-error{
+  display:none;
+  color:#ff8a8a;
+  font-size:12.5px;
+  margin:-8px 0 14px;
+}
+.login-error.show{display:block;}
+.field-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+.checkbox-field{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13.5px;
+  color:var(--ink);
+}
+.checkbox-field input{width:auto; margin:0;}
+
+/* ---------- dashboard shell ---------- */
+.admin-topbar{
+  position:sticky; top:0; z-index:50;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 28px;
+  background:rgba(5,8,6,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.admin-topbar-brand{
+  display:flex; align-items:center; gap:10px;
+  font-family:'Baloo 2'; font-weight:700;
+}
+.admin-topbar-brand img{width:30px; height:30px; border-radius:50%;}
+.admin-topbar-actions{display:flex; gap:10px;}
+.btn-sm{padding:9px 18px; font-size:13px;}
+
+.admin-main{
+  max-width:1180px;
+  margin:0 auto;
+  padding:36px 24px 80px;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:26px;
+  align-items:start;
+}
+@media (max-width:920px){ .admin-main{grid-template-columns:1fr;} }
+
+.admin-panel{
+  background:var(--panel-solid);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px;
+}
+.admin-panel h2{font-size:1.2rem; color:var(--ink); font-family:'Baloo 2';}
+.admin-panel-sub{font-size:13px; margin-bottom:22px;}
+
+.dropzone{
+  border:1.5px dashed var(--line);
+  border-radius:var(--radius-sm);
+  padding:26px 16px;
+  text-align:center;
+  font-size:13px;
+  color:var(--muted);
+  cursor:pointer;
+  transition:border-color .2s ease, background .2s ease;
+  margin-bottom:16px;
+}
+.dropzone:hover, .dropzone.drag{border-color:var(--green); background:rgba(69,232,138,.05);}
+.upload-preview{margin-bottom:16px;}
+.upload-preview img, .upload-preview video{
+  width:100%;
+  border-radius:var(--radius-sm);
+  border:1px solid var(--line);
+  max-height:220px;
+  object-fit:cover;
+}
+.admin-form-actions{display:flex; gap:10px; margin-top:6px;}
+
+/* ---------- content list ---------- */
+.admin-list{display:flex; flex-direction:column; gap:12px;}
+.admin-row{
+  display:grid;
+  grid-template-columns:64px 1fr auto;
+  gap:14px;
+  align-items:center;
+  background:var(--panel-2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:12px 14px;
+}
+.admin-row-thumb{
+  width:64px; height:64px;
+  border-radius:10px;
+  overflow:hidden;
+  background:#000;
+}
+.admin-row-thumb img{width:100%; height:100%; object-fit:cover;}
+.admin-row-info h4{margin:0 0 4px; font-size:14.5px; color:var(--ink); font-family:'Baloo 2';}
+.admin-row-meta{
+  font-size:12px;
+  color:var(--muted);
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.status-pill{
+  font-size:10.5px;
+  font-weight:700;
+  padding:3px 9px;
+  border-radius:999px;
+  text-transform:uppercase;
+  letter-spacing:.03em;
+}
+.status-pill.published{background:rgba(69,232,138,.15); color:var(--green);}
+.status-pill.draft{background:rgba(147,168,156,.15); color:var(--muted);}
+.status-pill.featured{background:rgba(255,209,102,.15); color:var(--gold);}
+.admin-row-actions{display:flex; gap:6px;}
+.icon-btn{
+  background:none;
+  border:1px solid var(--line);
+  color:var(--muted);
+  width:32px; height:32px;
+  border-radius:9px;
+  cursor:pointer;
+  font-size:14px;
+  transition:color .2s ease, border-color .2s ease;
+}
+.icon-btn:hover{color:var(--green); border-color:var(--green);}
+.icon-btn.danger:hover{color:#ff8a8a; border-color:#ff8a8a;}
+.admin-list-empty{
+  display:none;
+  border:1.5px dashed var(--line);
+  border-radius:var(--radius-sm);
+  padding:30px;
+  text-align:center;
+  font-size:13.5px;
+}
+.admin-list:empty{display:none;}
+.admin-list:empty + .admin-list-empty{display:block;}
+
+@media (max-width:600px){
+  .admin-topbar{padding:12px 16px; gap:12px;}
+  .admin-topbar-brand{min-width:0; font-size:14px;}
+  .admin-topbar-brand span{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .admin-topbar-actions{gap:6px;}
+  .btn-sm{padding:8px 11px; font-size:12px;}
+  .admin-main{padding:24px 16px 56px; gap:18px;}
+  .admin-panel{padding:22px 18px;}
+  .field-row{grid-template-columns:1fr; gap:0;}
+  .admin-form-actions{flex-direction:column;}
+  .admin-form-actions .btn{width:100%;}
+  .admin-row{grid-template-columns:48px minmax(0,1fr); gap:10px; padding:10px;}
+  .admin-row-info{min-width:0;}
+  .admin-row-info h4{overflow-wrap:anywhere;}
+  .admin-row-actions{grid-column:2; justify-content:flex-start;}
+}
